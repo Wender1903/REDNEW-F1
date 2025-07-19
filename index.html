@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 Red</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <h2 class="cabecalho-logo">
+            <i>f1 esports</i>
+        </h2>
+        <nav class="navegacao">
+            <a href="" class="navegacao-link">Início</a>
+            <a href="" class="navegacao-link">Equipes</a>
+            <a href="" class="navegacao-link">Pilotos</a>
+        </nav>
+
+        <div class="menu-hamburguer" style="display: none;">
+            <button class="menu-hamb-btn-open">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff"
+                    class="bi bi-list img-hamburguer" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                </svg>
+            </button>
+
+            <button class="menu-hamb-btn-close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#ffffff"
+                    class="bi bi-x-octagon-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M11.46.146A.5.5 0 0 0 11.107 0H4.893a.5.5 0 0 0-.353.146L.146 4.54A.5.5 0 0 0 0 4.893v6.214a.5.5 0 0 0 .146.353l4.394 4.394a.5.5 0 0 0 .353.146h6.214a.5.5 0 0 0 .353-.146l4.394-4.394a.5.5 0 0 0 .146-.353V4.893a.5.5 0 0 0-.146-.353zm-6.106 4.5L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="carroussel">
+            <div class="carroussel-list">
+                <div class="carroussel-list-item active">
+                    
+                </div>
+                <div class="carroussel-list-item ">
+                    
+                </div>
+                <div class="carroussel-list-item">
+                    
+                </div>
+            </div>
+
+            <div class="carroussel-arrows">
+                <button id="carroussel-prev-btn">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z" />
+                    </svg>
+
+                </button>
+                <button id="carroussel-next-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
+                    </svg>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
