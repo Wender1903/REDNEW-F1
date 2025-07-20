@@ -25,6 +25,13 @@ body {
     background-color: transparent;
     z-index: 7;
 
+    @media screen and (max-width:700px) {
+        padding: 24px 0px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 22px;
+    }
+
     & .cabecalho-logo {
         text-transform: uppercase;
         font-size: 1.7rem;
@@ -85,37 +92,62 @@ body {
 
 
             &:nth-child(1) {
-                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                    url('https://doubleapex.co.za/wp-content/uploads/2022/10/Michael-Schumacher-Ferrari-F2003-GA-in-action.jpg'), rgba(0, 0, 0, 0.4);
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: center;
 
-                @media screen and (max-width:700px) {
-                    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                        url('https://wallpapercave.com/wp/wp13092447.jpg');
-                    background-repeat: no-repeat;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+
+                    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                        url('https://cdn.wallpapersafari.com/47/40/TO3jIV.jpg'), rgba(0, 0, 0, 0.4);
                     background-size: cover;
-                    background-position: bottom;
+                    background-repeat: no-repeat;
+                    background-position: center;
+
+
+
+                    @media screen and (max-width:700px) {
+                        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                            url('');
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: center;
+                    }
                 }
+
 
             }
 
             &:nth-child(2) {
-                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                    url('https://wallpapers.com/images/hd/pulsating-speed-a-formula-1-race-car-in-action-q8y0hpx0fxe4cp1j.jpg'), rgba(0, 0, 0, 0.4);
-                width: 100%;
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: center center;
 
-                @media screen and (max-width:700px) {
-                    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                        url('https://w0.peakpx.com/wallpaper/977/307/HD-wallpaper-formula-one-automotive-lighting-silver-arrows-racing-car-ferrari-f1-redbull-cloud-f1-racing-pit-crew-red-car-mercedes-amg-sucduria-ferrari-sports-car.jpg');
-                    background-repeat: no-repeat;
+
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+
+                    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                        url('https://www.wsupercars.com/wallpapers-wide/Formula-1/Scuderia-Ferrari/2023-Formula1-Ferrari-SF-23-002-1440w.jpg'), rgba(0, 0, 0, 0.4);
+                    width: 100%;
                     background-size: cover;
-                    background-position: left;
+                    background-repeat: no-repeat;
+
+                    @media screen and (max-width:700px) {
+                        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                            url('https://www.wsupercars.com/wallpapers-phone/Formula-1/Scuderia-Ferrari/2024-Formula1-Ferrari-SF-24-009-2800p.jpg');
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: bottom;
+                    }
                 }
+
 
                 /*                 */
 
@@ -124,23 +156,30 @@ body {
             }
 
             &:nth-child(3) {
-                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                    url('https://wallpapercrafter.com/desktop/121090-Formula-1-McLaren-Mclaren-Mp4-Marlboro-Ayrton-Senna-helmet-rain.jpg'), rgba(0, 0, 0, 0.4);
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center;
 
-                @media screen and (max-width:1440px) {
-                    background-position: center center;
-                }
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
 
-                @media screen and (max-width:700px) {
                     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                        url('https://i.pinimg.com/736x/95/69/87/9569871a93a6a20186a2c9aeee7947b3.jpg');
+                        url('https://wallpapercrafter.com/desktop/121090-Formula-1-McLaren-Mclaren-Mp4-Marlboro-Ayrton-Senna-helmet-rain.jpg');
                     background-repeat: no-repeat;
                     background-size: cover;
-                    background-position: center;
+                    background-position: center center;
+
+                    @media screen and (max-width:700px) {
+                        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                            url('https://www.wsupercars.com/wallpapers-phone/Formula-1/Red-Bull-Racing/2022-Formula1-Red-Bull-Racing-RB18-004-2400p.jpg');
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: center;
+                    }
                 }
+
 
 
 
