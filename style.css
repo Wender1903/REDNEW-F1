@@ -29,7 +29,7 @@ body {
         padding: 24px 0px;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 22px;
+        gap: 12.7px;
     }
 
     & .cabecalho-logo {
@@ -41,7 +41,7 @@ body {
 
     & .navegacao {
         display: flex;
-        gap: 36px;
+        gap: 32px;
 
         & .navegacao-link {
             color: #ffffff;
@@ -111,7 +111,7 @@ body {
 
                     @media screen and (max-width:700px) {
                         background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                            url('');
+                            url('https://i.pinimg.com/736x/dd/99/24/dd99245a1b373862ca5fa7a2489649a6.jpg');
                         background-repeat: no-repeat;
                         background-size: cover;
                         background-position: center;
