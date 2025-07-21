@@ -1,3 +1,27 @@
+
+let menuHamb = document.getElementById('menu-hamburguer')
+let openHamb = document.getElementById('open-hamburguer')
+let closeHamb = document.getElementById('close-hamburguer')
+
+function menuHamburguer(acao) {
+    if (acao > 0) {
+        menuHamb.classList.add('active-hamb', 'anim-next')
+        openHamb.classList.remove('active')
+        closeHamb.classList.add('active')
+    } else if (acao < 0) {
+        closeHamb.classList.remove('active', 'anim-next')
+        menuHamb.classList.remove('active-hamb')
+        openHamb.classList.add('active')
+    }
+}
+
+openHamb.onclick = () => {
+    menuHamburguer(1)
+}
+closeHamb.onclick = () => {
+    menuHamburguer(-1)
+}
+
 let prevBtn = document.getElementById('carroussel-prev-btn')
 let nextBtn = document.getElementById('carroussel-next-btn')
 let carroussel = document.querySelector('.carroussel')
