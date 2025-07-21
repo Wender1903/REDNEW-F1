@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Oswald", sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+}
+
+.cabecalho {
+    position: relative;
+    width: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 32px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    z-index: 7;
+
+    .cabecalho-logo {
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        letter-spacing: 1.5px;
+        color: #ffff;
+    }
+
+    .navegacao {
+        display: flex;
+        gap: 32px;
+
+        .navegacao-link {
+            color: #ffffff;
+            font-size: 1.2rem;
+            letter-spacing: 0.37px;
+            transition: all 0.5s ease-in-out;
+
+            &:hover {
+                transform: translateY(-7px);
+                color: #aa0000;
+            }
+        }
+    }
+
+    .menu-hamburguer {
+        display: none;
+    }
+}
+
+.carroussel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+
+    .carroussel-list {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow-x: hidden;
+
+        .carroussel-list-item {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.7s ease-in-out;
+            z-index: 0;
+
+            &.active {
+                opacity: 1;
+                z-index: 1;
+            }
+
+            &:nth-child(1)::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                    url('https://cdn.wallpapersafari.com/47/40/TO3jIV.jpg'), rgba(0, 0, 0, 0.4);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            &:nth-child(2)::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                    url('https://www.wsupercars.com/wallpapers-wide/Formula-1/Scuderia-Ferrari/2023-Formula1-Ferrari-SF-23-002-1440w.jpg'), rgba(0, 0, 0, 0.4);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            &:nth-child(3)::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                    url('https://wallpapercrafter.com/desktop/121090-Formula-1-McLaren-Mclaren-Mp4-Marlboro-Ayrton-Senna-helmet-rain.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+            }
+        }
+    }
+
+    .carroussel-arrows {
+        position: absolute;
+        padding: 0 7px;
+        width: 100%;
+        top: 50%;
+        display: flex;
+        justify-content: space-between;
+        z-index: 3;
+
+        button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+
+            svg {
+                width: 41px;
+                height: 40px;
+                background-color: #fff;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+.anim-next {
+    animation: animCarrosussel-next 0.7s ease-in;
+}
+
+.anim-prev {
+    animation: animCarrosussel-prev 0.7s ease-in;
+}
+
+@keyframes animCarrosussel-next {
+    0% {
+        transform: translateX(100vw);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes animCarrosussel-prev {
+    0% {
+        transform: translateX(-100vw);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* ==== Responsividade separada ==== */
+
+@media screen and (max-width: 700px) {
+    .cabecalho {
+        width: 100%;
+        padding: 21px 10%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 12.7px;
+
+        .cabecalho-logo {
+            font-size: 24px;
+        }
+
+        .navegacao {
+            display: none;
+        }
+
+        .menu-hamburguer {
+            display: block;
+
+            button {
+                position: absolute;
+                right: 10%;
+                top: 24px;
+                background-color: transparent;
+                border: none;
+
+                svg {
+
+                    width: 32px;
+                    height: 32px;
+                }
+
+            }
+
+            .menu-hamb-btn-close {
+                display: none;
+            }
+
+        }
+    }
+
+    .carroussel {
+        .carroussel-list {
+            .carroussel-list-item:nth-child(1)::before {
+                background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                    url('https://i.pinimg.com/736x/dd/99/24/dd99245a1b373862ca5fa7a2489649a6.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+
+            .carroussel-list-item:nth-child(2)::before {
+                background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                    url('https://www.wsupercars.com/wallpapers-phone/Formula-1/Scuderia-Ferrari/2024-Formula1-Ferrari-SF-24-009-2800p.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: bottom;
+            }
+
+            .carroussel-list-item:nth-child(3)::before {
+                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                    url('https://www.wsupercars.com/wallpapers-phone/Formula-1/Red-Bull-Racing/2022-Formula1-Red-Bull-Racing-RB18-004-2400p.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+        }
+
+        .carroussel-arrows {
+            button {
+                svg {
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+        }
+    }
+}
