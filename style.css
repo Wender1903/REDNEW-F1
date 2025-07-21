@@ -46,6 +46,9 @@ body {
 .cabecalho .menu-hamburguer {
   display: none;
 }
+.cabecalho .menu-hamburguer-buttons {
+  display: none;
+}
 
 .carroussel {
   position: absolute;
@@ -170,22 +173,65 @@ body {
   .cabecalho .navegacao {
     display: none;
   }
-  .cabecalho .menu-hamburguer {
+  .cabecalho .menu-hamburguer.active-hamb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 75%;
+    height: 100vh;
+    background-color: #000;
+    color: #fff;
+  }
+  .cabecalho .menu-hamburguer.active-hamb .menu-hamburguer-cabecalho {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 47.7vh;
+    width: 100%;
+    z-index: 1;
+  }
+  .cabecalho .menu-hamburguer.active-hamb .menu-hamburguer-cabecalho .menu-hamburguer-cabecalho-logo {
+    text-transform: uppercase;
+  }
+  .cabecalho .menu-hamburguer.active-hamb .menu-hamburguer-cabecalho .menu-hamburguer-cabecalho-navegacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 17%;
+    gap: 20px;
+    font-size: 20px;
+  }
+  .cabecalho .menu-hamburguer.active-hamb .menu-hamburguer-cabecalho .menu-hamburguer-cabecalho-navegacao .menu-hamburguer-cabecalho-navegacao-links {
+    text-transform: uppercase;
+    border-bottom: 0.1rem solid #424141;
+    color: #fff;
+    width: 77%;
+    text-align: right;
+    padding: 0px 12px;
+  }
+  .cabecalho .menu-hamburguer-buttons {
     display: block;
   }
-  .cabecalho .menu-hamburguer button {
+  .cabecalho .menu-hamburguer-buttons button {
     position: absolute;
     right: 10%;
     top: 24px;
     background-color: transparent;
     border: none;
+    display: none;
+    z-index: 3;
   }
-  .cabecalho .menu-hamburguer button svg {
+  .cabecalho .menu-hamburguer-buttons button.active {
+    display: block;
+  }
+  .cabecalho .menu-hamburguer-buttons button.active svg {
     width: 32px;
     height: 32px;
-  }
-  .cabecalho .menu-hamburguer .menu-hamb-btn-close {
-    display: none;
   }
   .carroussel .carroussel-list .carroussel-list-item:nth-child(1)::before {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://i.pinimg.com/736x/dd/99/24/dd99245a1b373862ca5fa7a2489649a6.jpg");
