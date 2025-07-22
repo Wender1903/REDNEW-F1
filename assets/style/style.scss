@@ -23,6 +23,7 @@ body {
     background-color: transparent;
     z-index: 7;
 
+
     .cabecalho-logo {
         text-transform: uppercase;
         font-size: 1.7rem;
@@ -47,7 +48,8 @@ body {
         }
     }
 
-    .menu-hamburguer {
+    .menu-hamburguer,
+    .menu-hamburguer-buttons {
         display: none;
     }
 }
@@ -195,9 +197,58 @@ body {
         }
 
         .menu-hamburguer {
+            display: none;
+
+            &.active-hamb {
+                display: flex;
+                height: 100vh;
+                width: 80%;
+                position: absolute;
+                top: 0;
+                right: 0;
+                background-color: #000;
+                color: #fff;
+                justify-content: center;
+
+                .menu-hamburguer-cabecalho {
+                    width: 100%;
+                    margin-top: 23.7%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: flex-start;
+                    gap: 28px;
+
+                    .menu-hamburguer-cabecalho-logo {
+                        text-transform: uppercase;
+                    }
+
+                    .menu-hamburguer-cabecalho-navegacao {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 12px;
+
+                        .menu-hamburguer-cabecalho-navegacao-links {
+                            width: 77%;
+                            padding: 3px 12px;
+                            border-bottom: .1rem solid #444343;
+                            font-size: 17px;
+                            text-align: right;
+                            text-transform: uppercase;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+
+        .menu-hamburguer-buttons {
             display: block;
 
             button {
+                display: none;
                 position: absolute;
                 right: 10%;
                 top: 24px;
@@ -210,11 +261,13 @@ body {
                     height: 32px;
                 }
 
+                &.active {
+                    display: block;
+                }
+
             }
 
-            .menu-hamb-btn-close {
-                display: none;
-            }
+
 
         }
     }
