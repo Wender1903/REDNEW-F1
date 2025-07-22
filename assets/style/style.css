@@ -73,44 +73,53 @@ body {
   opacity: 0;
   transition: opacity 0.7s ease-in-out;
   z-index: 0;
-}
-.carroussel .carroussel-list .carroussel-list-item .content {
-  z-index: 7;
   display: flex;
-  transform: translateY(-11%);
-  width: 75%;
-  margin-left: 16%;
-  flex-direction: column;
-  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
-}
-.carroussel .carroussel-list .carroussel-list-item .content .content-sub-title {
-  color: #aa0000;
-  text-transform: uppercase;
-  font-size: 15px;
-}
-.carroussel .carroussel-list .carroussel-list-item .content .content-title {
-  text-transform: uppercase;
-  color: #fff;
-  font-size: 22.7px;
-  padding-bottom: 7%;
-}
-.carroussel .carroussel-list .carroussel-list-item .content .content-text {
-  color: #fff;
-  padding-bottom: 7%;
-}
-.carroussel .carroussel-list .carroussel-list-item .content .content-btn {
-  padding: 8px 16px;
-  background-color: #aa0000;
-  color: #fff;
-  border: none;
-  border-radius: 25px;
-  transform: translateX(0.7px);
 }
 .carroussel .carroussel-list .carroussel-list-item.active {
   display: flex;
   align-items: center;
   opacity: 1;
   z-index: 2;
+}
+.carroussel .carroussel-list .carroussel-list-item.active .content {
+  z-index: 7;
+  display: flex;
+  height: 50%;
+  width: 42%;
+  gap: 44px;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 10.7%;
+}
+.carroussel .carroussel-list .carroussel-list-item.active .content .content-sub-title {
+  color: #aa0000;
+  text-transform: uppercase;
+  font-size: 21px;
+}
+.carroussel .carroussel-list .carroussel-list-item.active .content .content-title {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 32px;
+}
+.carroussel .carroussel-list .carroussel-list-item.active .content .content-footer {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.carroussel .carroussel-list .carroussel-list-item.active .content .content-footer .content-text {
+  color: #fff;
+  letter-spacing: 0.7px;
+  width: 100%;
+  font-size: 20px;
+}
+.carroussel .carroussel-list .carroussel-list-item.active .content .content-footer .content-btn {
+  padding: 8px 16px;
+  background-color: #aa0000;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-size: 18px;
 }
 .carroussel .carroussel-list .carroussel-list-item:nth-child(1)::before {
   content: "";
@@ -119,7 +128,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("https://cdn.wallpapersafari.com/47/40/TO3jIV.jpg"), rgba(0, 0, 0, 0.4);
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://cdn.wallpapersafari.com/47/40/TO3jIV.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -132,10 +141,18 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.wsupercars.com/wallpapers-wide/Formula-1/Scuderia-Ferrari/2023-Formula1-Ferrari-SF-23-002-1440w.jpg"), rgba(0, 0, 0, 0.4);
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://ferrari-view.thron.com/api/xcontents/resources/delivery/getThumbnail/ferrari/1920x1080/d50106fa-94a8-4234-86df-0dcf27683fa1.jpg?v=149");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   z-index: 1;
+}
+@media screen and (max-width: 1440px) {
+  .carroussel .carroussel-list .carroussel-list-item:nth-child(2)::before {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://ferrari-view.thron.com/api/xcontents/resources/delivery/getThumbnail/ferrari/1920x1080/9f7f4385-6fc6-43c4-a9d8-994529c61a51.jpg?v=148");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 }
 .carroussel .carroussel-list .carroussel-list-item:nth-child(3)::before {
   content: "";
@@ -144,7 +161,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://wallpapercrafter.com/desktop/121090-Formula-1-McLaren-Mclaren-Mp4-Marlboro-Ayrton-Senna-helmet-rain.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.57), rgba(0, 0, 0, 0.57)), url("https://wallpapercrafter.com/desktop/121090-Formula-1-McLaren-Mclaren-Mp4-Marlboro-Ayrton-Senna-helmet-rain.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -269,6 +286,42 @@ body {
   .cabecalho .menu-hamburguer-buttons button.active svg {
     width: 32px;
     height: 32px;
+  }
+  .carroussel .carroussel-list .carroussel-list-item.active {
+    justify-content: space-evenly;
+  }
+  .carroussel .carroussel-list .carroussel-list-item.active .content {
+    justify-content: center;
+    width: 73%;
+    margin-left: 3%;
+    gap: 36px;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+  }
+  .carroussel .carroussel-list .carroussel-list-item.active .content .content-sub-title {
+    color: #aa0000;
+    text-transform: uppercase;
+    font-size: 15px;
+  }
+  .carroussel .carroussel-list .carroussel-list-item.active .content .content-title {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 22.7px;
+  }
+  .carroussel .carroussel-list .carroussel-list-item.active .content .content-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+  .carroussel .carroussel-list .carroussel-list-item.active .content .content-footer .content-text {
+    color: #fff;
+  }
+  .carroussel .carroussel-list .carroussel-list-item.active .content .content-footer .content-btn {
+    padding: 8px 16px;
+    background-color: #aa0000;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    transform: translateX(-0.7px);
   }
   .carroussel .carroussel-list .carroussel-list-item:nth-child(1)::before {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://i.pinimg.com/736x/dd/99/24/dd99245a1b373862ca5fa7a2489649a6.jpg");
