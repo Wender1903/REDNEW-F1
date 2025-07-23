@@ -220,6 +220,22 @@ body {
     width: 75%;
   }
 }
+@keyframes animMenuHambClose {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+.menu-hamb-open {
+  animation: animMenuHamb 0.7s ease-in-out;
+}
+
+.menu-hamb-close {
+  animation: animMenuHambClose 1s ease-in-out;
+}
+
 /* ==== Responsividade separada ==== */
 @media screen and (max-width: 700px) {
   .cabecalho {
@@ -243,7 +259,7 @@ body {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.8901960784);
     color: #fff;
-    animation: animMenuHamb 0.7s ease-in-out;
+    overflow-x: hidden;
   }
   .cabecalho .menu-hamburguer.active-hamb {
     display: flex;
@@ -261,6 +277,9 @@ body {
   }
   .cabecalho .menu-hamburguer.active-hamb .menu-hamburguer-cabecalho .menu-hamburguer-cabecalho-logo {
     text-transform: uppercase;
+    animation: fadeRotate1 1.7s ease-out forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
   }
   .cabecalho .menu-hamburguer.active-hamb .menu-hamburguer-cabecalho .menu-hamburguer-cabecalho-navegacao {
     display: flex;
@@ -278,6 +297,21 @@ body {
     width: 77%;
     text-align: right;
     padding: 0px 12px;
+  }
+  .cabecalho .menu-hamburguer.active-hamb .menu-hamburguer-cabecalho .menu-hamburguer-cabecalho-navegacao .menu-hamburguer-cabecalho-navegacao-links:nth-child(1) {
+    animation: fadeRotate2 0.7s ease-out forwards;
+    animation-delay: 0.7s;
+    opacity: 0;
+  }
+  .cabecalho .menu-hamburguer.active-hamb .menu-hamburguer-cabecalho .menu-hamburguer-cabecalho-navegacao .menu-hamburguer-cabecalho-navegacao-links:nth-child(2) {
+    animation: fadeRotate3 0.7s ease-out forwards;
+    animation-delay: 0.8s;
+    opacity: 0;
+  }
+  .cabecalho .menu-hamburguer.active-hamb .menu-hamburguer-cabecalho .menu-hamburguer-cabecalho-navegacao .menu-hamburguer-cabecalho-navegacao-links:nth-child(3) {
+    animation: fadeRotate2 0.5s ease-out forwards;
+    animation-delay: 0.8s;
+    opacity: 0;
   }
   .cabecalho .menu-hamburguer-buttons {
     display: block;
@@ -367,5 +401,41 @@ body {
   .carroussel .carroussel-arrows button svg {
     width: 28px;
     height: 28px;
+  }
+}
+@keyframes fadeRotate1 {
+  0% {
+    opacity: 0;
+    transform: translateX(120px) rotate(5deg);
+  }
+  50% {
+    transform: translateX(-15px) rotate(-2deg);
+  }
+  75% {
+    transform: translateX(5px) rotate(1deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotate(0deg);
+  }
+}
+@keyframes fadeRotate2 {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeRotate3 {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }/*# sourceMappingURL=style.css.map */

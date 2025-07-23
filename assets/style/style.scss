@@ -258,6 +258,23 @@ body {
     }
 }
 
+@keyframes animMenuHambClose {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100vw);
+    }
+}
+
+.menu-hamb-open {
+    animation: animMenuHamb .7s ease-in-out;
+}
+.menu-hamb-close {
+    animation: animMenuHambClose 1s ease-in-out;
+}
+
 
 
 /* ==== Responsividade separada ==== */
@@ -286,7 +303,8 @@ body {
             height: 100vh;
             background-color: #000000e3;
             color: #fff;
-            animation: animMenuHamb .7s ease-in-out;
+            overflow-x: hidden;
+            
 
 
             &.active-hamb {
@@ -306,6 +324,10 @@ body {
 
                     .menu-hamburguer-cabecalho-logo {
                         text-transform: uppercase;
+                        animation: fadeRotate1 1.7s ease-out forwards;
+                        animation-delay: 0.2s;
+                        opacity: 0;
+
 
                     }
 
@@ -325,6 +347,24 @@ body {
                             width: 77%;
                             text-align: right;
                             padding: 0px 12px;
+
+                            &:nth-child(1) {
+                                animation: fadeRotate2 .7s ease-out forwards;
+                                animation-delay: .7s;
+                                opacity: 0;
+                            }
+
+                            &:nth-child(2) {
+                                animation: fadeRotate3 .7s ease-out forwards;
+                                animation-delay: .8s;
+                                opacity: 0;
+                            }
+
+                            &:nth-child(3) {
+                                animation: fadeRotate2 .5s ease-out forwards;
+                                animation-delay: .8s;
+                                opacity: 0;
+                            }
                         }
                     }
 
@@ -468,5 +508,52 @@ body {
                 }
             }
         }
+    }
+}
+
+
+@keyframes fadeRotate1 {
+    0% {
+        opacity: 0;
+        transform: translateX(120px) rotate(5deg);
+    }
+
+    50% {
+        transform: translateX(-15px) rotate(-2deg);
+    }
+
+    75% {
+        transform: translateX(5px) rotate(1deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0) rotate(0deg);
+    }
+}
+
+
+
+@keyframes fadeRotate2 {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeRotate3 {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
