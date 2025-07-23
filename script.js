@@ -1,25 +1,26 @@
 
 let menuHamb = document.getElementById('menu-hamburguer')
-let openHamb = document.getElementById('open-hamburguer')
-let closeHamb = document.getElementById('close-hamburguer')
+let btnHamb = document.getElementById('open-hamburguer')
 
 function menuHamburguer(acao) {
     if (acao > 0) {
-        menuHamb.classList.add('active-hamb', 'anim-next')
-        openHamb.classList.remove('active')
-        closeHamb.classList.add('active')
+        menuHamb.classList.add('active-hamb')
+        btnHamb.classList.add('close-hamb')
+
     } else if (acao < 0) {
-        closeHamb.classList.remove('active', 'anim-next')
         menuHamb.classList.remove('active-hamb')
-        openHamb.classList.add('active')
+        btnHamb.classList.remove('close-hamb')
+
     }
 }
 
-openHamb.onclick = () => {
-    menuHamburguer(1)
-}
-closeHamb.onclick = () => {
-    menuHamburguer(-1)
+btnHamb.onclick = () => {
+    if (!menuHamb.classList.contains('active-hamb')) {
+        menuHamburguer(1)
+    } else {
+        menuHamburguer(-1)
+
+    }
 }
 
 let prevBtn = document.getElementById('carroussel-prev-btn')
