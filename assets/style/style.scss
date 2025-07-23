@@ -227,6 +227,7 @@ body {
     animation: animCarrosussel-prev 0.7s ease-in;
 }
 
+
 @keyframes animCarrosussel-next {
     0% {
         transform: translateX(100vw);
@@ -247,6 +248,18 @@ body {
     }
 }
 
+@keyframes animMenuHamb {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 75%;
+    }
+}
+
+
+
 /* ==== Responsividade separada ==== */
 
 @media screen and (max-width: 700px) {
@@ -266,18 +279,20 @@ body {
         }
 
         .menu-hamburguer {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 75%;
+            height: 100vh;
+            background-color: #000000e3;
+            color: #fff;
+            animation: animMenuHamb .7s ease-in-out;
+
 
             &.active-hamb {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                position: absolute;
-                top: 0;
-                right: 0;
-                width: 75%;
-                height: 100vh;
-                background-color: #000;
-                color: #fff;
 
                 .menu-hamburguer-cabecalho {
                     display: flex;
@@ -305,7 +320,7 @@ body {
 
                         .menu-hamburguer-cabecalho-navegacao-links {
                             text-transform: uppercase;
-                            border-bottom: .1rem solid #424141;
+                            border-bottom: .1rem solid #aa0000;
                             color: #fff;
                             width: 77%;
                             text-align: right;
@@ -322,22 +337,38 @@ body {
             display: block;
 
             button {
-                position: absolute;
-                right: 10%;
-                top: 24px;
+                display: flex;
+                flex-direction: column;
+                gap: 7px;
                 background-color: transparent;
                 border: none;
-                display: none;
-                z-index: 3;
 
-                &.active {
-                    display: block;
+                .hamb-style {
+                    width: 24px;
+                    height: 1.7px;
+                    background-color: #fff;
+                    z-index: 3;
+                    transform-origin: center;
+                    transition: .5s ease-in-out;
 
-                    svg {
-                        width: 32px;
-                        height: 32px;
+                }
+
+                &.close-hamb {
+                    .hamb-style {
+                        &:nth-child(1) {
+                            transform: translateY(5px) rotate(-45deg);
+                        }
+
+                        &:nth-child(2) {
+                            display: none;
+                        }
+
+                        &:nth-child(3) {
+                            transform: translateY(-4px)rotate(45deg);
+                        }
                     }
                 }
+
 
 
 
@@ -357,7 +388,7 @@ body {
                     .content {
                         justify-content: center;
                         width: 72%;
-                        margin: 0%; 
+                        margin: 0%;
                         margin-left: 3%;
                         gap: 25.7px;
                         text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);

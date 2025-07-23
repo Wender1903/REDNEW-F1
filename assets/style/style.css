@@ -212,6 +212,14 @@ body {
     transform: translateX(0);
   }
 }
+@keyframes animMenuHamb {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 75%;
+  }
+}
 /* ==== Responsividade separada ==== */
 @media screen and (max-width: 700px) {
   .cabecalho {
@@ -227,17 +235,20 @@ body {
   .cabecalho .navegacao {
     display: none;
   }
-  .cabecalho .menu-hamburguer.active-hamb {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .cabecalho .menu-hamburguer {
     position: absolute;
     top: 0;
     right: 0;
     width: 75%;
     height: 100vh;
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.8901960784);
     color: #fff;
+    animation: animMenuHamb 0.7s ease-in-out;
+  }
+  .cabecalho .menu-hamburguer.active-hamb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .cabecalho .menu-hamburguer.active-hamb .menu-hamburguer-cabecalho {
     display: flex;
@@ -262,7 +273,7 @@ body {
   }
   .cabecalho .menu-hamburguer.active-hamb .menu-hamburguer-cabecalho .menu-hamburguer-cabecalho-navegacao .menu-hamburguer-cabecalho-navegacao-links {
     text-transform: uppercase;
-    border-bottom: 0.1rem solid #424141;
+    border-bottom: 0.1rem solid #aa0000;
     color: #fff;
     width: 77%;
     text-align: right;
@@ -272,20 +283,28 @@ body {
     display: block;
   }
   .cabecalho .menu-hamburguer-buttons button {
-    position: absolute;
-    right: 10%;
-    top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
     background-color: transparent;
     border: none;
-    display: none;
+  }
+  .cabecalho .menu-hamburguer-buttons button .hamb-style {
+    width: 24px;
+    height: 1.7px;
+    background-color: #fff;
     z-index: 3;
+    transform-origin: center;
+    transition: 0.5s ease-in-out;
   }
-  .cabecalho .menu-hamburguer-buttons button.active {
-    display: block;
+  .cabecalho .menu-hamburguer-buttons button.close-hamb .hamb-style:nth-child(1) {
+    transform: translateY(5px) rotate(-45deg);
   }
-  .cabecalho .menu-hamburguer-buttons button.active svg {
-    width: 32px;
-    height: 32px;
+  .cabecalho .menu-hamburguer-buttons button.close-hamb .hamb-style:nth-child(2) {
+    display: none;
+  }
+  .cabecalho .menu-hamburguer-buttons button.close-hamb .hamb-style:nth-child(3) {
+    transform: translateY(-4px) rotate(45deg);
   }
   .carroussel .carroussel-list .carroussel-list-item.active {
     justify-content: space-evenly;
